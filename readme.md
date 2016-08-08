@@ -313,6 +313,16 @@ myObject.hasOwnProperty( "a" ); // true
 
 ### Prototypes
 
+Difference between `__proto__` and `prototype`
+
+`__proto__` is the actual object that is used in the lookup chain to resolve methods, etc.
+`prototype` is the object that is used to build `__proto__` when you create an object with new:
+
+```
+( new Foo ).__proto__ === Foo.prototype
+( new Foo ).prototype === undefined
+```
+
 ```
 function Foo() { /* .. */ }
 Foo.prototype = { /* .. */ }; // create a new prototype object
