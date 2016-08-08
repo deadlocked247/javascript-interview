@@ -428,6 +428,87 @@ secure way to access a remote computer.
 SSH also refers to the suite of utilities that implement the protocol
 
 
+## Algorithms
+
+## Graphs
+
+### Depth-first Search
+
+`O(|E|)`
+Algorithm to traverse a tree. Start at the root and explore as far as possible before backtracking.
+Uses a stack.
+
+```
+1  procedure DFS-iterative(G,v):
+2      let S be a stack
+3      S.push(v)
+4      while S is not empty
+5            v = S.pop()
+6            if v is not labeled as discovered and not in stack:
+7                label v as discovered
+8                for all edges from v to w in G.adjacentEdges(v) do
+9                    if w is not labeled as discovered : S.push(w)
+```
+
+### Breadth-first Search
+
+`O(|E|)`
+Algorithm to traverse a tree. Start at the root and visits all neighbors before moving to next level;
+Uses Queue.
+
+```
+Breadth-First-Search(Graph, root):
+ 2
+ 3     for each node n in Graph:            
+ 4         n.distance = INFINITY        
+ 5         n.parent = NIL
+ 6
+ 7     create empty queue Q      
+ 8
+ 9     root.distance = 0
+10     Q.enqueue(root)                      
+11
+12     while Q is not empty:        
+13     
+14         current = Q.dequeue()
+15     
+16         for each node n that is adjacent to current:
+17             if n.distance == INFINITY:
+18                 n.distance = current.distance + 1
+19                 n.parent = current
+20                 Q.enqueue(n)
+```
+
+### Prim's
+
+A greedy algorithm that finds a minimum spanning tree for a weighted undirected graph.
+`O(|V|^2)`
+
+### Kruskal's
+
+A minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest.
+`O(logV)`
+
+### Bellman-Ford
+
+An algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph. It is slower than Dijkstra's algorithm for the same problem, but more versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers
+`O(|V||E|)`
+
+### Floyd–Warshall
+
+An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles).
+`O(|V|^3)`
+
+### Dijkstra's
+An algorithm for finding the shortest paths between nodes in a graph.
+`O(|E| + |V|log|V|)`
+
+## Maximum Flow
+This involves finding a feasible flow through a single-source, single-sink flow network that is the maximum. The maximum value of an s-t flow (i.e., flow from source s to sink t) is equal to the minimum capacity of an s-t cut (i.e., cut severing s from t) in the network
+
+## Ford–Fulkerson
+A greedy algorithm that computes the maximum flow in a flow network
+`O(Ef)` where f is the maximum flow of the graph
 
 ## Data Strutures
 
