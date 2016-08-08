@@ -44,6 +44,26 @@ class LinkedList {
     return currentNode;
   }
 
+  reverse () {
+    if (!this.head || !this.head.next) {
+      console.log('No duplicates were found. Empty or a single element Linked List.');
+      return;
+    }
+
+    let p1 = null;
+    let p2 = this.head;
+    let p3;
+
+    while (p2) {
+      p3 = p2.next;
+      p2.next = p1;
+      p1 = p2;
+      p2 = p3;
+    }
+
+    this.head = p1;
+  }
+
   print () {
     let currentNode = this.head;
     while (currentNode) {
