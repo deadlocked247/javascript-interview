@@ -1,4 +1,4 @@
-# Javascript Review
+# Front-End Interview Review
 
 ## Javascript Questions
 
@@ -124,8 +124,10 @@ for (var i=1; i<=5; i++) {
     }, i*1000 );
 }
 ```
+
 > Prints 6 five times at 1 second intervals
 > Correct solution
+
 ```
 for(var i = 0; i < 10; i++) {
   setTimeout(console.log.bind(console, i), 10);
@@ -139,6 +141,7 @@ for (let i=1; i<=5; i++) {
     }, i*1000 );
 }
 ```
+
 
 ### `bind`
 `bind` creates a new function that will have `this` set to the first parameter passed to `bind()`.
