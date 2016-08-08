@@ -4,8 +4,11 @@
 
 ### Redux
 Actions – Helper methods that facilitate passing data to the Dispatcher
+
 Dispatcher – Receives actions and broadcasts payloads to registered callbacks
+
 Stores – Containers for application state & logic that have callbacks registered to the dispatcher
+
 Controller Views – React Components that grab the state from Stores and pass it down via props to child components.
 
 Polymorphism - It is the practice of designing objects to share behaviors and to be able to override shared behaviors with specific ones. Polymorphism takes advantage of inheritance in order to make this happen.
@@ -18,20 +21,19 @@ Javascript has a process that constantly checks whether the call stack is empty,
 
 ### What happens when you visit a URL
 
-browser checks cache; if requested object is in cache and is fresh
-browser asks OS for server's IP address
-OS makes a DNS lookup and replies the IP address to the browser
-browser opens a TCP connection to server (this step is much more complex with HTTPS)
-browser sends the HTTP request through TCP connection
-browser receives HTTP response and may close the TCP connection, or reuse it for another request
-browser checks if the response is a redirect or a conditional response (3xx result status codes),
-authorization request (401), error (4xx and 5xx), etc.; these are handled differently from normal responses (2xx)
-if cacheable, response is stored in cache
-browser decodes response (e.g. if it's gzipped)
-browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
-The browser then uses HTML parser to re-create document structure which is later presented to you on screen.
-If it finds references to external resources, such as pictures, css files, javascript files, these are is delivered the same way
-as the HTML document itself.
+1. browser checks cache; if requested object is in cache and is fresh
+1. browser asks OS for server's IP address
+1. OS makes a DNS lookup and replies the IP address to the browser
+1. browser opens a TCP connection to server (this step is much more complex with HTTPS)
+1. browser sends the HTTP request through TCP connection
+1. browser receives HTTP response and may close the TCP connection, or reuse it for another request
+1. browser checks if the response is a redirect or a conditional response (3xx result status codes),
+1. authorization request (401), error (4xx and 5xx), etc.; these are handled differently from normal responses (2xx)
+1. if cacheable, response is stored in cache
+1. browser decodes response (e.g. if it's gzipped)
+1. browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
+1. The browser then uses HTML parser to re-create document structure which is later presented to you on screen.
+1. If it finds references to external resources, such as pictures, css files, javascript files, these are is delivered the same way as the HTML document itself.
 
 ### React Stuff
 
